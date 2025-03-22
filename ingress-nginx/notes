@@ -1,0 +1,5 @@
+Accès à l'application
+Lancez la commande minikube pour permettre l'accès en local dans le navigateur :
+
+minikube tunnel 
+pour ouvrir un tunnel entre la node minikube et la machine hots(local)

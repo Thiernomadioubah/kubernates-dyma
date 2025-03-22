@@ -1,0 +1,29 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: mon-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  # defaultBackend:
+  #   service:
+  #     name: projet1-html-mercredi-service
+  #     port:
+  #       number: 80
+  rules:
+  - http:
+      paths:
+      - pathType: Prefix
+        path: "/jeudi"
+        backend:
+          service:
+            name: projet1-html-jeudi-service
+            port:
+              number: 80
+      - pathType: Prefix
+        path: "/mercredi"
+        backend:
+          service:
+            name: projet1-html-mercredi-service
+            port:
+              number: 80
