@@ -1,0 +1,4 @@
+Accès à l'application
+Lancez la commande minikube pour permettre l'accès en local dans le navigateur :
+
+minikube service projet1-html-service
