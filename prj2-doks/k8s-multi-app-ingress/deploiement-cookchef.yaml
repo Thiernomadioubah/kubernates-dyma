@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: projet2-cookchef-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx-cookchef
+  template:
+    metadata:
+      labels:
+        app: nginx-cookchef
+    spec:
+      containers:
+      - name: nginx-container
+        image: thierno9/prj2_cookchef
+        ports:
+        - containerPort: 80
